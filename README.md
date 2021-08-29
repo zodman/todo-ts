@@ -1,6 +1,6 @@
 # For run
 
-yarn install
+yarn install -D
 yarn run start
 
 # generate the frontend

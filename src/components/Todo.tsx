@@ -12,10 +12,11 @@ const HIGH = 2;
 const priority = (priority: number | undefined) => {
   if (priority && priority > 0) {
     const color: string = priority === HIGH ? 'red' : 'blue';
+    const bgColor: string = `bg-${color}-50 text-${color}-400`
     return (
       <div className="ml-8 mt-2">
         <span
-          className={`px-2 py-1 bg-${color}-50 text-${color}-400 font-medium capitalize rounded-lg`}
+          className={`px-2 py-1 ${bgColor} font-medium capitalize rounded-lg`}
         >
           {priority === HIGH ? 'high' : 'low'}
         </span>

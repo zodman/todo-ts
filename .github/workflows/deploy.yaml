@@ -19,4 +19,6 @@ jobs:
           node-version: 14.x  
       - run: npm install
       - run: npm build
-      - run: rsync --progress -v dist/* zodman@python3.ninja:apps/todo-ts/
+      - run: | 
+        ssh-keyscan python3.ninja >> ~/.ssh/known_hosts
+        rsync --recursive --progress -v build/* zodman@python3.ninja:apps/todo-ts/

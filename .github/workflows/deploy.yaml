@@ -20,6 +20,5 @@ jobs:
       - run: yarn install -D
       - run: yarn  build
       - run: | 
-          ls -lah 
           ssh-keyscan python3.ninja >> ~/.ssh/known_hosts
           rsync --recursive --progress -v build/* zodman@python3.ninja:apps/tsdo-ts/

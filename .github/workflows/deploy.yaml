@@ -20,5 +20,5 @@ jobs:
       - run: npm install
       - run: npm build
       - run: | 
-        ssh-keyscan python3.ninja >> ~/.ssh/known_hosts
-        rsync --recursive --progress -v build/* zodman@python3.ninja:apps/todo-ts/
+          ssh-keyscan python3.ninja >> ~/.ssh/known_hosts
+          rsync --recursive --progress -v build/* zodman@python3.ninja:apps/todo-ts/

@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x  
-      - run: npm install
+      - run: npm install --dev
       - run: npm run build
       - run: | 
           ssh-keyscan python3.ninja >> ~/.ssh/known_hosts
